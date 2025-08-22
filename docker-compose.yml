@@ -20,7 +20,7 @@ services:
     build: .
     image: nginx-msg:dev
     ports:
-      - "80:80"
+      - "8081:80"
     environment:
       - MYMSG=Hola desde web2
     networks:
@@ -30,7 +30,7 @@ services:
       - "traefik.http.routers.<unique-name>.rule=Host(`web.blasdelezo.uk`)"
       - "traefik.http.routers.<unique-name>.entrypoints=websecure"
       - "traefik.http.routers.<unique-name>.tls.certResolver=letsencrypt"
-      - "traefik.http.services.<unique-name>.loadbalancer.server.port=80"
+      - "traefik.http.services.<unique-name>.loadbalancer.server.port=8081"
 networks:
   dokploy-network:
     external: true
