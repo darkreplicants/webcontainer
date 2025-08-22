@@ -12,7 +12,7 @@ services:
       - dokploy-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.<unique-name>.rule=Host(`your-domain.com`)"
+      - "traefik.http.routers.<unique-name>.rule=Host(`web.blasdelezo.uk`)"
       - "traefik.http.routers.<unique-name>.entrypoints=websecure"
       - "traefik.http.routers.<unique-name>.tls.certResolver=letsencrypt"
       - "traefik.http.services.<unique-name>.loadbalancer.server.port=8080"
