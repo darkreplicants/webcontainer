@@ -21,8 +21,6 @@ services:
     image: nginx-msg:dev
     ports:
       - "8081:80"
-    environment:
-      - MYMSG=Hola desde web2
     networks:
       - dokploy-network
     labels:
